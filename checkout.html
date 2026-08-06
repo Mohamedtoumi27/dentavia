@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DentaVia — Commande</title>
+  <meta name="description" content="Finalisez votre commande DentaVia — paiement à la livraison partout en Algérie." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="announce">Paiement à la livraison · Vous ne payez qu'à la réception de votre commande</div>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a href="index.html" class="brand"><img class="brand__logo" src="assets/img/logo.png" alt="DentaVia" /></a>
+      <a href="index.html#products" class="nav__back">← Continuer mes achats</a>
+    </div>
+  </header>
+
+  <main class="wrap checkout" id="checkoutMain">
+    <div class="checkout__form-col">
+      <h1 class="checkout__title">Finaliser la commande</h1>
+      <p class="muted checkout__sub">Remplissez vos informations de livraison. Vous payez en espèces à la réception.</p>
+
+      <form id="orderForm" novalidate>
+        <fieldset class="field-group">
+          <legend>Vos coordonnées</legend>
+          <div class="grid-2">
+            <label class="field"><span>Prénom *</span><input name="firstName" required autocomplete="given-name" /></label>
+            <label class="field"><span>Nom *</span><input name="lastName" required autocomplete="family-name" /></label>
+          </div>
+          <label class="field"><span>Téléphone *</span><input name="phone" type="tel" inputmode="tel" required placeholder="0X XX XX XX XX" autocomplete="tel" /></label>
+        </fieldset>
+
+        <fieldset class="field-group">
+          <legend>Adresse de livraison</legend>
+          <div class="grid-2">
+            <label class="field"><span>Wilaya *</span><select name="wilaya" id="wilaya" required></select></label>
+            <label class="field"><span>Commune *</span><input name="commune" required /></label>
+          </div>
+          <label class="field"><span>Adresse complète *</span><input name="address" required placeholder="Rue, quartier, point de repère…" autocomplete="street-address" /></label>
+
+          <div class="ship-type" role="radiogroup" aria-label="Type de livraison">
+            <label class="ship-opt"><input type="radio" name="shipType" value="domicile" checked /><span><strong>À domicile</strong><small id="feeDomicile">—</small></span></label>
+            <label class="ship-opt"><input type="radio" name="shipType" value="stopdesk" /><span><strong>Stop Desk (bureau)</strong><small id="feeStopdesk">—</small></span></label>
+          </div>
+
+          <label class="field"><span>Notes (optionnel)</span><textarea name="notes" rows="2" placeholder="Instructions de livraison…"></textarea></label>
+        </fieldset>
+
+        <button type="submit" class="btn btn--solid btn--block btn--lg" id="placeOrder">Confirmer la commande</button>
+        <p class="checkout__reassure">🔒 Aucun paiement en ligne. Vous réglez en espèces à la livraison.</p>
+      </form>
+    </div>
+
+    <aside class="checkout__summary">
+      <h2>Votre commande</h2>
+      <div id="summaryItems" class="summary__items"></div>
+      <div class="summary__row"><span>Sous-total</span><span id="sumSubtotal">0 DA</span></div>
+      <div class="summary__row"><span>Livraison</span><span id="sumShipping">—</span></div>
+      <div class="summary__row summary__total"><span>Total</span><span id="sumTotal">0 DA</span></div>
+      <p class="summary__note">Livraison gratuite dès 5 000 DA.</p>
+    </aside>
+  </main>
+
+  <!-- Confirmation (hidden until order placed) -->
+  <section class="wrap confirm" id="confirmView" hidden>
+    <div class="confirm__card">
+      <div class="confirm__check">✓</div>
+      <h1>Merci, votre commande est confirmée !</h1>
+      <p class="muted">Commande <strong id="confirmId"></strong>. Notre équipe vous appellera très bientôt au numéro fourni pour confirmer la livraison.</p>
+      <div id="confirmSummary" class="confirm__summary"></div>
+      <a href="index.html" class="btn btn--solid">Retour à l'accueil</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap footer__bottom" style="border:0;margin:0;padding-top:0">
+      <p>© 2026 DentaVia. Tous droits réservés.</p>
+      <p>Alger, Algérie</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/checkout.js"></script>
+</body>
+</html>

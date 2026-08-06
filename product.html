@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DentaVia — Produit</title>
+  <meta name="description" content="Découvrez les soins blanchissants DentaVia — beauty-inspired oral care." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="announce">Livraison gratuite dès 5000 DA · Paiement à la livraison partout en Algérie</div>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a href="index.html" class="brand"><img class="brand__logo" src="assets/img/logo.png" alt="DentaVia" /></a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="index.html#products">Produits</a>
+        <a href="index.html#science">La science</a>
+        <a href="index.html#routine">Routine</a>
+        <a href="index.html">À propos</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn cart-count" data-count="0" id="cartOpen" aria-label="Panier">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="productMain"><!-- rendered by product.js --></main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="brand"><img class="brand__logo" src="assets/img/logo.png" alt="DentaVia" /></a>
+          <p>Beauty-inspired oral care. Un sourire plus blanc, naturellement.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Boutique</h4>
+          <a href="product.html?id=powder">Poudre blanchissante</a><a href="product.html?id=purple">Purple Formula V34</a><a href="product.html?id=pink">Pink Formula</a><a href="product.html?id=routine">Routine complète</a>
+        </div>
+        <div class="footer__col">
+          <h4>Aide</h4>
+          <a href="#">Livraison</a><a href="#">Retours</a><a href="#">Nous contacter</a><a href="#">FAQ</a>
+        </div>
+        <div class="footer__col">
+          <h4>Suivez-nous</h4>
+          <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 DentaVia. Tous droits réservés.</p>
+        <p>Alger, Algérie</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Panier">
+    <div class="drawer__head">
+      <h3>Votre panier</h3>
+      <button class="icon-btn" id="cartClose" aria-label="Fermer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="drawer__items" id="cartItems"></div>
+    <div class="drawer__foot">
+      <div class="drawer__total"><span>Total</span><span id="cartTotal">0 DA</span></div>
+      <a href="checkout.html" class="btn btn--solid btn--block">Passer à la caisse</a>
+    </div>
+  </aside>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/product.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/media.js"></script>
+</body>
+</html>

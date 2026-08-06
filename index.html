@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DentaVia — Blanchiment dentaire naturel</title>
+  <meta name="description" content="DentaVia — poudre dentifrice naturelle et Smile Kit V34. Haleine fraîche, dents blanches, sourire confiant. Livraison partout en Algérie." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Logo intro (animated reveal, once per session) ===== -->
+  <div class="intro" id="intro" hidden>
+    <div class="intro__stage">
+      <svg class="intro__smile" viewBox="0 0 120 26" preserveAspectRatio="none" fill="none" aria-hidden="true">
+        <path d="M5 6 C42 31 78 31 115 6" stroke="url(#ig)" stroke-width="6" stroke-linecap="round" pathLength="1" vector-effect="non-scaling-stroke" />
+        <defs><linearGradient id="ig" x1="0" y1="0" x2="120" y2="0"><stop stop-color="#8b3dd6"/><stop offset="1" stop-color="#e14a9b"/></linearGradient></defs>
+      </svg>
+      <img class="intro__logo" src="assets/img/logo.png" alt="DentaVia" />
+    </div>
+  </div>
+
+  <!-- Announcement -->
+  <div class="announce">Livraison gratuite dès 5000 DA · Paiement à la livraison partout en Algérie</div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="wrap nav">
+      <a href="index.html" class="brand"><img class="brand__logo" src="assets/img/logo.png" alt="DentaVia" /></a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#products">Produits</a>
+        <a href="#science">La science</a>
+        <a href="#routine">Routine</a>
+        <a href="#">À propos</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn" aria-label="Rechercher">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <button class="icon-btn cart-count" data-count="0" id="cartOpen" aria-label="Panier">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </button>
+        <button class="icon-btn nav__toggle" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <span class="eyebrow">Blanchiment dentaire · Naturel</span>
+          <h1 class="hero__title">Un sourire plus blanc.<br /><em>Naturellement.</em></h1>
+          <svg class="hero__smile" viewBox="0 0 220 40" fill="none" aria-hidden="true"><path d="M6 6c40 44 168 44 208 0" stroke="url(#hs)" stroke-width="7" stroke-linecap="round"/><defs><linearGradient id="hs" x1="0" y1="0" x2="220" y2="0"><stop stop-color="#8b3dd6"/><stop offset="1" stop-color="#e14a9b"/></linearGradient></defs></svg>
+          <p class="hero__lead">Haleine fraîche, dents blanches, sourire confiant. Des formules douces et efficaces, sans peroxyde agressif.</p>
+          <div class="hero__cta">
+            <a href="#products" class="btn btn--solid">Découvrir les produits</a>
+            <a href="#science" class="btn btn--outline">Notre approche</a>
+          </div>
+        </div>
+        <div class="hero__media hero__media--photo">
+          <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="none" poster="assets/img/hero.jpg" hidden>
+            <source src="assets/video/hero.mp4" type="video/mp4" />
+          </video>
+          <img src="assets/img/hero.jpg" alt="La gamme DentaVia — poudre et Smile Kit V34" />
+          <span class="hero__badge">Formule naturelle · Sans peroxyde · Sourire éclatant</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <div class="trust">
+      <div class="wrap trust__row">
+        <div class="trust__item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5Z"/><path d="m9 12 2 2 4-4"/></svg> Testé en laboratoire</div>
+        <div class="trust__item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22c4-3 8-6.5 8-12a8 8 0 1 0-16 0c0 5.5 4 9 8 12Z"/><circle cx="12" cy="10" r="2.5"/></svg> Fabriqué avec rigueur</div>
+        <div class="trust__item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 6 9 17l-5-5"/></svg> Sans cruauté animale</div>
+        <div class="trust__item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M7 8V6a5 5 0 0 1 10 0v2"/></svg> Paiement à la livraison</div>
+      </div>
+    </div>
+
+    <!-- Products -->
+    <section id="products" class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">La gamme</span>
+          <h2>Des soins ciblés, un rituel complet.</h2>
+        </div>
+        <p>Chaque produit répond à un besoin précis — sélectionnés pour agir ensemble, matin et soir.</p>
+      </div>
+      <div class="products" id="productGrid"><!-- injected by JS --></div>
+    </section>
+
+    <!-- Science feature -->
+    <section id="science" class="feature">
+      <div class="wrap feature__grid">
+        <div class="feature__media feature__media--video">
+          <video class="feature__video" controls playsinline preload="none" poster="assets/img/feature-poster.jpg">
+            <source src="assets/video/feature.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div>
+          <span class="eyebrow">La méthode DentaVia</span>
+          <h2>Un blanchiment doux, des résultats visibles.</h2>
+          <p class="muted">Pas de peroxyde agressif, pas de sensibilité. Des formules pensées pour éclaircir naturellement et préserver l'émail — pour un sourire confiant, jour après jour.</p>
+          <ul class="feature__list">
+            <li><span class="feature__num">01</span><div><h4>Technologie V34</h4><p>Le violet neutralise les reflets jaunes pour un sourire visiblement plus blanc dès la première utilisation.</p></div></li>
+            <li><span class="feature__num">02</span><div><h4>Formule naturelle</h4><p>Poudre dentifrice naturelle, sans peroxyde agressif. Douce pour l'émail et les gencives.</p></div></li>
+            <li><span class="feature__num">03</span><div><h4>Sourire confiant</h4><p>Haleine fraîche, dents blanches, confiance retrouvée — un rituel simple, matin et soir.</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Color-correction theory -->
+    <section id="theory" class="theory">
+      <div class="wrap">
+        <div class="theory__head">
+          <span class="eyebrow">La science des couleurs</span>
+          <h2>Le violet neutralise le jaune.</h2>
+          <p>Comme les shampoings violets annulent les reflets jaunes des cheveux blonds, la technologie&nbsp;V34 applique la <strong>théorie des couleurs complémentaires</strong> à votre sourire. Sur le cercle chromatique, le violet fait face au jaune&nbsp;: il l'annule visuellement, pour un sourire perçu comme plus blanc — instantanément.</p>
+        </div>
+
+        <div class="theory__grid">
+          <!-- Color wheel -->
+          <div class="theory__wheel">
+            <div class="wheel"><span class="wheel__hole"></span></div>
+            <span class="wheel__line" aria-hidden="true"></span>
+            <span class="wheel__vs">neutralise</span>
+            <span class="wheel__mark wheel__mark--top"><span class="dot" style="background:#8b3dd6"></span>Violet</span>
+            <span class="wheel__mark wheel__mark--bottom"><span class="dot" style="background:#fde047"></span>Jaune</span>
+          </div>
+
+          <!-- Pairs + result -->
+          <div class="theory__side">
+            <h3>Deux couleurs opposées s'annulent</h3>
+            <ul class="pairs">
+              <li class="pair pair--active">
+                <span class="swatch" style="background:#8b3dd6"></span> Violet
+                <span class="pair__x">annule</span>
+                <span class="swatch" style="background:#fde047"></span> Jaune
+              </li>
+              <li class="pair">
+                <span class="swatch" style="background:#3b82f6"></span> Bleu
+                <span class="pair__x">annule</span>
+                <span class="swatch" style="background:#f97316"></span> Orange
+              </li>
+              <li class="pair">
+                <span class="swatch" style="background:#22c55e"></span> Vert
+                <span class="pair__x">annule</span>
+                <span class="swatch" style="background:#ef4444"></span> Rouge
+              </li>
+            </ul>
+
+            <div class="theory__result">
+              <figure class="tooth-fig">
+                <svg class="tooth" viewBox="0 0 60 72" aria-hidden="true"><path d="M30 4C16 4 8 12 8 26c0 12 4 22 8 32 2 5 8 6 9 1l3-14c.6-3 4-3 4.6 0l3 14c1 5 7 4 9-1 4-10 8-20 8-32C52 12 44 4 30 4Z" fill="#efe0a6"/></svg>
+                <figcaption>Avant<small>reflets jaunes</small></figcaption>
+              </figure>
+              <div class="tooth-arrow">
+                <span class="tooth-drop">V34</span>
+                <svg width="40" height="16" viewBox="0 0 40 16" fill="none"><path d="M0 8h34m0 0-6-6m6 6-6 6" stroke="url(#ar)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="ar" x1="0" y1="0" x2="40" y2="0"><stop stop-color="#8b3dd6"/><stop offset="1" stop-color="#e14a9b"/></linearGradient></defs></svg>
+              </div>
+              <figure class="tooth-fig">
+                <svg class="tooth" viewBox="0 0 60 72" aria-hidden="true"><path d="M30 4C16 4 8 12 8 26c0 12 4 22 8 32 2 5 8 6 9 1l3-14c.6-3 4-3 4.6 0l3 14c1 5 7 4 9-1 4-10 8-20 8-32C52 12 44 4 30 4Z" fill="#ffffff" stroke="#ece7f2"/></svg>
+                <span class="tooth-spark">✦</span>
+                <figcaption>Après<small>sourire éclatant</small></figcaption>
+              </figure>
+            </div>
+            <p class="theory__note">Ce procédé s'appelle le <strong>blanchiment optique</strong> : les pigments violets équilibrent les tons chauds et modifient la façon dont la lumière se reflète sur les dents.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lifestyle band -->
+    <section class="band">
+      <img src="assets/img/lifestyle.jpg" alt="Laboratoire DentaVia" />
+      <div class="band__overlay">
+        <div class="wrap">
+          <span class="eyebrow" style="color:#e9d8fb">Beauty-inspired oral care</span>
+          <h2>Formulé comme un laboratoire.<br />Pensé comme un rituel beauté.</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Homepage video section (appears when assets/video/reel.mp4 exists) -->
+    <section class="vsection" id="videoSection" hidden>
+      <div class="wrap">
+        <div class="sec-head">
+          <div><span class="eyebrow">En vidéo</span><h2>DentaVia en mouvement.</h2></div>
+          <p>Le sourire éclatant, en action.</p>
+        </div>
+        <div class="vplayer">
+          <video id="reelVideo" class="vplayer__video" controls playsinline preload="none" poster="assets/img/reel-poster.jpg">
+            <source src="assets/video/reel.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video gallery (appears when assets/video/gallery-N.mp4 exist) -->
+    <section class="vgallery" id="videoGallery" hidden>
+      <div class="wrap">
+        <div class="sec-head">
+          <div><span class="eyebrow">@dentavia</span><h2>Le sourire en action.</h2></div>
+          <div class="carousel-nav">
+            <button class="carousel-btn" id="galPrev" aria-label="Précédent">&#8249;</button>
+            <button class="carousel-btn" id="galNext" aria-label="Suivant">&#8250;</button>
+          </div>
+        </div>
+      </div>
+      <div class="vcarousel">
+        <div class="vcarousel__track" id="vgalleryGrid"></div>
+      </div>
+    </section>
+
+    <!-- Routine / Newsletter -->
+    <section id="routine" class="wrap">
+      <div class="news">
+        <span class="eyebrow" style="color:#8fd0c5">Rejoignez Dentavia</span>
+        <h2>Recevez votre routine personnalisée.</h2>
+        <p>Conseils d'experts, nouveautés et offres réservées. Inscrivez-vous et obtenez -10% sur votre première commande.</p>
+        <form class="news__form" onsubmit="event.preventDefault(); this.reset(); alert('Merci ! (branchement e-mail à venir)');">
+          <input type="email" placeholder="Votre adresse e-mail" required />
+          <button class="btn btn--solid" type="submit">S'inscrire</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="brand"><img class="brand__logo" src="assets/img/logo.png" alt="DentaVia" /></a>
+          <p>Soins bucco-dentaires formulés avec rigueur clinique. Une bouche saine, un sourire éclatant.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Boutique</h4>
+          <a href="#">Poudre dentifrice</a><a href="#">Smile Kit V34</a><a href="#">Coffrets</a><a href="#">Tous les produits</a>
+        </div>
+        <div class="footer__col">
+          <h4>Aide</h4>
+          <a href="#">Livraison</a><a href="#">Retours</a><a href="#">Nous contacter</a><a href="#">FAQ</a>
+        </div>
+        <div class="footer__col">
+          <h4>Suivez-nous</h4>
+          <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 Dentavia. Tous droits réservés.</p>
+        <p>Alger, Algérie</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Panier">
+    <div class="drawer__head">
+      <h3>Votre panier</h3>
+      <button class="icon-btn" id="cartClose" aria-label="Fermer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="drawer__items" id="cartItems"></div>
+    <div class="drawer__foot">
+      <div class="drawer__total"><span>Total</span><span id="cartTotal">0 DA</span></div>
+      <a href="checkout.html" class="btn btn--solid btn--block">Passer à la caisse</a>
+    </div>
+  </aside>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/media.js"></script>
+  <script src="assets/js/intro.js"></script>
+</body>
+</html>
