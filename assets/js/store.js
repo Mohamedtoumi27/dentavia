@@ -105,6 +105,61 @@ document.getElementById("cartOpen")?.addEventListener("click", openDrawer);
 document.getElementById("cartClose")?.addEventListener("click", closeDrawer);
 overlay?.addEventListener("click", closeDrawer);
 
+/* ---------- Mobile menu ---------- */
+const navToggle = document.querySelector(".nav__toggle");
+const navLinks = document.querySelector(".nav__links");
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => document.body.classList.toggle("nav-open"));
+  navLinks.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => document.body.classList.remove("nav-open"))
+  );
+}
+
+/* ---------- Product search ---------- */
+(function initSearch() {
+  const btn = document.querySelector('[aria-label="Rechercher"]');
+  if (!btn || typeof PRODUCTS === "undefined") return;
+
+  const el = document.createElement("div");
+  el.className = "search";
+  el.id = "searchOverlay";
+  el.hidden = true;
+  el.innerHTML = `
+    <div class="search__head wrap">
+      <input type="search" id="searchInput" placeholder="Rechercher un produit…" autocomplete="off" />
+      <button class="icon-btn" id="searchClose" aria-label="Fermer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="wrap search__results" id="searchResults"></div>`;
+  document.body.appendChild(el);
+
+  const input = el.querySelector("#searchInput");
+  const results = el.querySelector("#searchResults");
+
+  const open = () => { el.hidden = false; document.body.classList.add("search-open"); setTimeout(() => input.focus(), 50); render(""); };
+  const close = () => { el.hidden = true; document.body.classList.remove("search-open"); input.value = ""; };
+
+  function render(q) {
+    const query = q.trim().toLowerCase();
+    const list = query
+      ? PRODUCTS.filter((p) => (p.name + " " + p.cat + " " + p.blurb).toLowerCase().includes(query))
+      : PRODUCTS;
+    if (!list.length) { results.innerHTML = `<p class="search__empty">Aucun produit pour « ${q} ».</p>`; return; }
+    results.innerHTML = list.map((p) => `
+      <a class="search__item" href="product.html?id=${p.id}">
+        <span class="search__thumb${mediaClass(p)}"><img src="${imgOf(p)}" alt="" onerror="this.style.opacity=0"></span>
+        <span class="search__info"><strong>${p.name}</strong><small>${p.cat} · ${p.size}</small></span>
+        <span class="search__price">${fmt(p.price)}</span>
+      </a>`).join("");
+  }
+
+  btn.addEventListener("click", open);
+  el.querySelector("#searchClose").addEventListener("click", close);
+  input.addEventListener("input", () => render(input.value));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !el.hidden) close(); });
+})();
+
 /* ---------- Init ---------- */
 renderProducts();
 renderCart();

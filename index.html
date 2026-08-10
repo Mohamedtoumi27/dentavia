@@ -15,16 +15,13 @@
   <!-- ===== Logo intro (animated reveal, once per session) ===== -->
   <div class="intro" id="intro" hidden>
     <div class="intro__stage">
-      <svg class="intro__smile" viewBox="0 0 120 26" preserveAspectRatio="none" fill="none" aria-hidden="true">
-        <path d="M5 6 C42 31 78 31 115 6" stroke="url(#ig)" stroke-width="6" stroke-linecap="round" pathLength="1" vector-effect="non-scaling-stroke" />
-        <defs><linearGradient id="ig" x1="0" y1="0" x2="120" y2="0"><stop stop-color="#8b3dd6"/><stop offset="1" stop-color="#e14a9b"/></linearGradient></defs>
-      </svg>
-      <img class="intro__logo" src="assets/img/logo.png" alt="DentaVia" />
+      <img class="intro__smile" src="assets/img/logo-smile.png" alt="" aria-hidden="true" />
+      <img class="intro__logo" src="assets/img/logo-nosmile.png" alt="DentaVia" />
     </div>
   </div>
 
   <!-- Announcement -->
-  <div class="announce">Livraison gratuite dès 5000 DA · Paiement à la livraison partout en Algérie</div>
+  <div class="announce">Paiement à la livraison · Livraison partout en Algérie 🇩🇿</div>
 
   <!-- Header -->
   <header class="site-header">
@@ -33,7 +30,7 @@
       <nav class="nav__links" aria-label="Principal">
         <a href="#products">Produits</a>
         <a href="#science">La science</a>
-        <a href="#routine">Routine</a>
+        <a href="#theory">La technologie</a>
         <a href="#">À propos</a>
       </nav>
       <div class="nav__actions">
@@ -220,18 +217,6 @@
       </div>
     </section>
 
-    <!-- Routine / Newsletter -->
-    <section id="routine" class="wrap">
-      <div class="news">
-        <span class="eyebrow" style="color:#8fd0c5">Rejoignez Dentavia</span>
-        <h2>Recevez votre routine personnalisée.</h2>
-        <p>Conseils d'experts, nouveautés et offres réservées. Inscrivez-vous et obtenez -10% sur votre première commande.</p>
-        <form class="news__form" onsubmit="event.preventDefault(); this.reset(); alert('Merci ! (branchement e-mail à venir)');">
-          <input type="email" placeholder="Votre adresse e-mail" required />
-          <button class="btn btn--solid" type="submit">S'inscrire</button>
-        </form>
-      </div>
-    </section>
   </main>
 
   <!-- Footer -->
@@ -248,16 +233,16 @@
         </div>
         <div class="footer__col">
           <h4>Aide</h4>
-          <a href="#">Livraison</a><a href="#">Retours</a><a href="#">Nous contacter</a><a href="#">FAQ</a>
+          <a href="mailto:contact@dentavia.dz">Nous contacter</a><a href="https://www.instagram.com/dentaviadz/" target="_blank" rel="noopener">Instagram</a>
         </div>
         <div class="footer__col">
           <h4>Suivez-nous</h4>
-          <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a>
+          <a href="https://www.instagram.com/dentaviadz/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@dentavia26" target="_blank" rel="noopener">TikTok</a>
         </div>
       </div>
       <div class="footer__bottom">
         <p>© 2026 Dentavia. Tous droits réservés.</p>
-        <p>Alger, Algérie</p>
+        <p>Alger, Algérie · <a href="mailto:contact@dentavia.dz">contact@dentavia.dz</a></p>
       </div>
     </div>
   </footer>

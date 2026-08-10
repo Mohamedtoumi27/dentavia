@@ -111,12 +111,12 @@ section { padding-block: clamp(3.5rem, 8vw, 7rem); }
 .intro__stage { position: relative; width: min(82vw, 400px); aspect-ratio: 578 / 259; }
 
 /* 1) smile swoosh draws first, sitting exactly where the logo's smile lives */
-.intro__smile { position: absolute; left: 25%; top: 79%; width: 50%; height: 22%; }
-.intro__smile path {
-  stroke-dasharray: 1; stroke-dashoffset: 1;
-  animation: introDraw .75s .15s cubic-bezier(.5,0,.3,1) forwards;
+.intro__smile {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;
+  clip-path: inset(0 100% 0 0);   /* revealed left → right, like it's being drawn */
+  animation: introDraw .8s .15s cubic-bezier(.45,0,.25,1) forwards;
 }
-@keyframes introDraw { to { stroke-dashoffset: 0; } }
+@keyframes introDraw { to { clip-path: inset(0 0 0 0); } }
 
 /* 2) full logo resolves in on top (its smile overlaps the drawn one) */
 .intro__logo {
@@ -592,6 +592,24 @@ section { padding-block: clamp(3.5rem, 8vw, 7rem); }
 .confirm__summary { text-align: left; background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 1.4rem; margin: 2rem 0; }
 
 /* =========================================================
+   Search overlay
+   ========================================================= */
+.search { position: fixed; inset: 0; z-index: 120; background: #fff; overflow-y: auto; animation: introIn .2s ease both; }
+.search__head { display: flex; align-items: center; gap: .8rem; padding-block: 1.1rem; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: #fff; }
+.search__head input { flex: 1; font: inherit; font-size: var(--step-1); border: 0; outline: 0; padding: .5rem 0; background: transparent; color: var(--ink); }
+.search__results { padding-block: 1rem 3rem; display: grid; gap: .3rem; }
+.search__item { display: grid; grid-template-columns: 54px 1fr auto; gap: 1rem; align-items: center; padding: .7rem .5rem; border-radius: var(--radius); color: var(--ink); }
+.search__item:hover, .search__item:active { background: var(--paper-2); }
+.search__thumb { aspect-ratio: 1; background: var(--paper-2); border-radius: var(--radius); display: grid; place-items: center; overflow: hidden; }
+.search__thumb img { width: 80%; }
+.search__thumb.is-photo img { width: 100%; height: 100%; object-fit: cover; }
+.search__info { display: flex; flex-direction: column; }
+.search__info strong { font-size: var(--step-0); }
+.search__info small { color: var(--ink-muted); font-family: var(--font-mono); font-size: var(--step--1); }
+.search__price { font-family: var(--font-mono); font-size: var(--step--1); }
+.search__empty { color: var(--ink-muted); padding: 2.5rem .5rem; }
+
+/* =========================================================
    Responsive
    ========================================================= */
 @media (max-width: 1000px) {
@@ -602,7 +620,15 @@ section { padding-block: clamp(3.5rem, 8vw, 7rem); }
   .hero__grid { grid-template-columns: 1fr; }
   .hero__media { order: -1; aspect-ratio: 16/12; }
   .feature__grid { grid-template-columns: 1fr; }
-  .nav__links { display: none; }
+  .nav__links {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: 0;
+    background: #fff; border-bottom: 1px solid var(--line);
+    padding: .3rem var(--gutter) 1rem; box-shadow: var(--shadow);
+  }
+  body.nav-open .nav__links { display: flex; }
+  .nav__links a { padding: 1rem .1rem; border-bottom: 1px solid var(--line); font-size: 1.05rem; color: var(--ink); }
+  .nav__links a::after { display: none; }
   .nav__toggle { display: inline-grid; }
   .card__add { opacity: 1; transform: none; }
   .pdp { grid-template-columns: 1fr; }

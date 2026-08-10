@@ -5,7 +5,7 @@
 
 /* ---------- CONFIG — edit these ---------- */
 const CONFIG = {
-  freeShippingMin: 5000,   // DA — free delivery above this subtotal
+  freeShippingMin: Infinity, // no free delivery — customer always pays shipping
   feeDomicile: 600,        // DA — home delivery
   feeStopdesk: 400,        // DA — desk pickup
   // Where orders are sent. Put YOUR WhatsApp number in international format
