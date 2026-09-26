@@ -168,6 +168,105 @@ const PRODUCTS = [
     ],
     usage: "Suivez les trois étapes pour des résultats optimaux.",
   },
+
+  {
+    id: "mouthwash-mint",
+    sku: "0119",
+    img: "assets/img/mouthwash-mint.jpg",
+    name: "Bain de Bouche White Boost",
+    subtitle: "Menthe intense · Sans alcool",
+    cat: "Bain de bouche",
+    tag: "Nouveau",
+    price: 600,
+    size: "250 ml",
+    color: "#1f4fd8",
+    blurb: "Un bain de bouche blanchissant au quotidien, à la menthe intense — 0 % alcool.",
+    overview:
+      "Le Bain de Bouche White Boost est un soin quotidien conçu pour aider à maintenir un sourire à l'aspect plus blanc, tout en apportant une fraîcheur de menthe intense. Sa formule sans alcool accompagne l'hygiène bucco-dentaire de tous les jours et laisse la bouche propre et rafraîchie.",
+    how: [
+      "Aide à maintenir un sourire à l'aspect plus blanc",
+      "Fraîcheur intense à la menthe",
+      "Soin blanchissant à utiliser chaque jour",
+      "Formule sans alcool (0 % alcool)",
+    ],
+    ingredients: [
+      { name: "Formule sans alcool", benefit: "Un soin doux, sans sensation de brûlure" },
+      { name: "Menthe intense", benefit: "Fraîcheur durable et haleine nette" },
+      { name: "Formule dentaire USA", benefit: "Un soin quotidien pensé pour l'hygiène bucco-dentaire" },
+    ],
+    benefits: [
+      { title: "Sourire plus blanc", text: "Aide à maintenir l'éclat du sourire au quotidien." },
+      { title: "Fraîcheur intense", text: "Une sensation de menthe qui dure." },
+      { title: "Soin quotidien", text: "Un geste simple à ajouter à votre routine." },
+      { title: "0 % alcool", text: "Une formule douce pour la bouche." },
+    ],
+    usage: "Chaque jour après le brossage. Ne pas avaler.",
+  },
+
+  {
+    id: "mouthwash-strawberry",
+    sku: "0129",
+    img: "assets/img/mouthwash-strawberry.jpg",
+    name: "Bain de Bouche Anti-bactérien",
+    subtitle: "Fraise-menthe · Sans alcool",
+    cat: "Bain de bouche",
+    tag: "Nouveau",
+    price: 600,
+    size: "250 ml",
+    color: "#c72a8a",
+    blurb: "Un bain de bouche antibactérien au quotidien, fraîcheur longue durée, saveur fraise-menthe — 0 % alcool.",
+    overview:
+      "Le Bain de Bouche Anti-bactérien accompagne l'hygiène bucco-dentaire de tous les jours et procure une fraîcheur longue durée. Sa saveur fraise-menthe laisse la bouche propre, fraîche et confortable, sans alcool.",
+    how: [
+      "Protection antibactérienne au quotidien",
+      "Haleine fraîche",
+      "Fraîcheur longue durée",
+      "Saveur fraise-menthe, formule sans alcool (0 % alcool)",
+    ],
+    ingredients: [
+      { name: "Formule sans alcool", benefit: "Un soin doux, sans sensation de brûlure" },
+      { name: "Fraise-menthe", benefit: "Une saveur fruitée et rafraîchissante" },
+      { name: "Formule dentaire USA", benefit: "Un soin quotidien pensé pour l'hygiène bucco-dentaire" },
+    ],
+    benefits: [
+      { title: "Protection antibactérienne", text: "Soutient l'hygiène bucco-dentaire de tous les jours." },
+      { title: "Haleine fraîche", text: "Une bouche propre et rafraîchie." },
+      { title: "Fraîcheur longue durée", text: "Une sensation de fraîcheur qui dure." },
+      { title: "0 % alcool", text: "Une formule douce pour la bouche." },
+    ],
+    usage: "Chaque jour après le brossage. Ne pas avaler.",
+  },
+
+  {
+    id: "mouthwash-pack",
+    sku: "0118",
+    img: "assets/img/mouthwash-pack.jpg",
+    name: "Pack Bain de Bouche",
+    subtitle: "White Boost + Anti-bactérien",
+    cat: "Coffret",
+    tag: "Pack",
+    price: 1200,
+    size: "2 × 250 ml",
+    color: "#7a3fb0",
+    blurb: "Les deux bains de bouche DentaVia réunis : blancheur à la menthe intense et protection antibactérienne fraise-menthe.",
+    overview:
+      "Le pack complet pour une bouche fraîche au quotidien : le White Boost à la menthe intense aide à maintenir un sourire à l'aspect plus blanc, et l'Anti-bactérien à la fraise-menthe apporte protection et fraîcheur longue durée. Deux bains de bouche sans alcool, pour toute la famille.",
+    how: [
+      "White Boost (menthe intense) : soin blanchissant quotidien",
+      "Anti-bactérien (fraise-menthe) : protection et fraîcheur longue durée",
+      "Deux formules sans alcool (0 % alcool)",
+    ],
+    ingredients: [
+      { name: "White Boost", benefit: "Menthe intense, aide à maintenir un sourire plus blanc" },
+      { name: "Anti-bactérien", benefit: "Fraise-menthe, protection antibactérienne et haleine fraîche" },
+    ],
+    benefits: [
+      { title: "Deux bains de bouche", text: "Blancheur à la menthe + protection à la fraise-menthe." },
+      { title: "0 % alcool", text: "Des formules douces pour la bouche." },
+      { title: "Fraîcheur toute la journée", text: "Une haleine fraîche et une bouche propre." },
+    ],
+    usage: "Chaque jour après le brossage. Ne pas avaler.",
+  },
 ];
 
 /* Shared helpers */
